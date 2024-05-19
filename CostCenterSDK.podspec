@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'CostCenterSDK'
-  spec.version       = '0.1.21'
+  spec.version       = '1.0.0'
   spec.homepage      = 'https://github.com/Cost-Center/ios-sdk'
   spec.license        = { :type => 'MIT', :file => 'MIT-LICENSE.txt' }
   spec.authors      = { 'Ho Van Ngan' => 'nganhopro2010@gmail.com' }
@@ -15,6 +15,5 @@ Pod::Spec.new do |spec|
   spec.resource_bundles = {
     "#{spec.module_name}_Privacy" => 'CostCenterSDK/**/*.xcprivacy'
   }
-  spec.readme = 'https://raw.githubusercontent.com/Cost-Center/ios-sdk/#{spec.version.to_s}/README.md'
 
 end
