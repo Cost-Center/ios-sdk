@@ -20,9 +20,13 @@ public class CostCenterSDK : NSObject{
     private let KEY_INSTALLATION_ID = "KEY_INSTALLATION_ID"
     private let KEY_FIRST_TIME_OPEN_APP = "KEY_FIRST_TIME_OPEN_APP"
     
-    @objc public func initialize(app: AnyClass, logger: Bool = false){
+    @objc public func initialize(logger: Bool = false){
         isShowingLog = logger
-        appInfo.bundleId = Bundle(for: app.self).bundleIdentifier
+        if let bundleIdentifier = Bundle.main.bundleIdentifier {
+            appInfo.bundleId = bundleIdentifier
+        } else {
+            CostCenterLogger(message:"Unable to retrieve BundleID")
+        }
         appInfo.vendorId = UIDevice.current.identifierForVendor?.uuidString
         if #available(iOS 14.3, *){
             do {

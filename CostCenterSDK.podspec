@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'CostCenterSDK'
-  spec.version       = '1.0.0'
+  spec.version       = '1.0.1'
   spec.homepage      = 'https://github.com/Cost-Center/ios-sdk'
   spec.license        = { :type => 'MIT', :file => 'MIT-LICENSE.txt' }
   spec.authors      = { 'Ho Van Ngan' => 'nganhopro2010@gmail.com' }
